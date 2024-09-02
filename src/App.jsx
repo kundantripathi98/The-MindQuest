@@ -8,7 +8,7 @@ import Result from './components/Result';
 import Footer from './components/Footer';
 import Timer from './components/Timer';
 import NextButton from './components/NextButton';
-import Main from './Main';
+import Main from './Main.jsx';
 
 const initialState = {
   questions: [],
