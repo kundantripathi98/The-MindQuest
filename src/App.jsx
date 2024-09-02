@@ -2,13 +2,13 @@ import { useEffect, useReducer } from 'react';
 import Header from './components/Header';
 import Loader from './components/Loader';
 import Error from './components/Error';
-import Main from './main';
 import StartScreen from './components/StartScreen';
 import Question from './components/Question';
 import Result from './components/Result';
 import Footer from './components/Footer';
 import Timer from './components/Timer';
 import NextButton from './components/NextButton';
+import Main from './Main';
 
 const initialState = {
   questions: [],
