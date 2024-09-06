@@ -1,4 +1,8 @@
-const StartScreen = ({numQuestions, onClick}) => {
+import { useQuiz } from "../context/QuizContext";
+
+const StartScreen = () => {
+  const {numQuestions, onClick} = useQuiz();
+  
   return (
     <div className="start">
       <h2>Welcome to The Mind Quest</h2>
