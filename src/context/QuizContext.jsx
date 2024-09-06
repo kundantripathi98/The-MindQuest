@@ -69,26 +69,11 @@ const QuizProvider = ({children}) => {
     let numQuestions = questions.length;
     const maxPossiblePoints = questions.reduce((prev, cur) => prev + cur.points, 0);
 
-    useEffect(()=>{
-        async function fetchData(){
-           try{
-             let res = await fetch("http://localhost:8000/questions");
-             let data = await res.json();
-     
-             dispatcher({type: "dataReceived", payLoad: data});
-           }
-           catch(err){
-             console.log(err.message);
-             
-             dispatcher({type: "dataFailed"});
-           }
-         }
-     
-         fetchData();
-    }, []);
      
     function handleClick(){
-        dispatcher({type: "start"})
+        dispatcher({type: "start"});
+        console.log("hello");
+        
     }
 
     return (

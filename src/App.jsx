@@ -9,10 +9,29 @@ import Timer from './components/Timer';
 import NextButton from './components/NextButton';
 import Main from './Main.jsx';
 import {useQuiz } from './context/QuizContext.jsx';
+import { useEffect } from 'react';
 
 
 const App = () => {
-  const {status} = useQuiz();
+  const {status, dispatcher} = useQuiz();
+
+  useEffect(()=>{
+    async function fetchData(){
+       try{
+         let res = await fetch("http://localhost:8000/questions");
+         let data = await res.json();
+ 
+         dispatcher({type: "dataReceived", payLoad: data});
+       }
+       catch(err){
+         console.log(err.message);
+         
+         dispatcher({type: "dataFailed"});
+       }
+     }
+ 
+     fetchData();
+}, []);
 
   return (
   <div className="app">

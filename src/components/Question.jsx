@@ -4,13 +4,13 @@ import ProgressBar from "./ProgressBar";
 
 
 const Question = () => {
-  const {currentQuestion} = useQuiz();
+  const {questions, index} = useQuiz();
 
   return (
     <>
     <ProgressBar/>
     <div>
-      <h4>{currentQuestion.question}</h4>
+      <h4>{questions[index].question}</h4>
       <Option/>
     </div>
     </>
