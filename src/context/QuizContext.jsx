@@ -68,7 +68,7 @@ const QuizProvider = ({children}) => {
     const [{questions, status, index, answer, points, highscore, secondsRemaining}, dispatcher] = useReducer(reducer, initialState);
     let numQuestions = questions.length;
     const maxPossiblePoints = questions.reduce((prev, cur) => prev + cur.points, 0);
-
+    const currentQuestion = questions[index];
      
     function handleClick(){
         dispatcher({type: "start"});
@@ -79,6 +79,7 @@ const QuizProvider = ({children}) => {
     return (
         <QuizContext.Provider value={{
             questions, 
+            currentQuestion,
             status, 
             index, 
             answer, 
