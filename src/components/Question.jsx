@@ -8,7 +8,7 @@ const Question = ({currentQuestion, dispatcher, answer, index, numQuestions, poi
 
   return (
     <>
-    <ProgressBar index={index} numQuestions={numQuestions} points={points} maxPossiblePoints={maxPossiblePoints} answer={answer}/>
+    <ProgressBar/>
     <div>
       <h4>{currentQuestion.question}</h4>
       <Option currentQuestion={currentQuestion} dispatcher={dispatcher} answer={answer}/>
