@@ -12,28 +12,6 @@ import {useQuiz } from './context/QuizContext.jsx';
 
 
 const App = () => {
-
-  // useEffect(()=>{
-  //  async function fetchData(){
-  //     try{
-  //       let res = await fetch("http://localhost:8000/questions");
-  //       let data = await res.json();
-
-  //       dispatcher({type: "dataReceived", payLoad: data});
-  //     }
-  //     catch(err){
-  //       console.log(err.message);
-        
-  //       dispatcher({type: "dataFailed"});
-  //     }
-  //   }
-
-  //   fetchData();
-  // }, []);
-
-  // function handleClick(){
-  //   dispatcher({type: "start"})
-  // }
   const {status} = useQuiz();
 
   return (
