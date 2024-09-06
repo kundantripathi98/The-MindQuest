@@ -116,7 +116,7 @@ const App = () => {
 
         {status === "active" && 
           <Footer>
-            <Timer dispatcher={dispatcher} secondsRemaining={secondsRemaining}/>
+            <Timer/>
             <NextButton answer={answer} dispatcher={dispatcher}index={index} numQuestions={numQuestions}/>
           </Footer>
         }
