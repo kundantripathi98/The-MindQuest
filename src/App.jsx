@@ -12,12 +12,7 @@ import {useQuiz } from './context/QuizContext.jsx';
 
 
 const App = () => {
-  // const [{questions, status, index, answer, points, highscore, secondsRemaining}, dispatcher] = useReducer(reducer, initialState);
-  // let numQuestions = questions.length;
-  // const maxPossiblePoints = questions.reduce((prev, cur) => prev + cur.points, 0);
-  // console.log(index);
-  
-  
+
   // useEffect(()=>{
   //  async function fetchData(){
   //     try{
