@@ -3,7 +3,7 @@ import Option from "./Option";
 import ProgressBar from "./ProgressBar";
 
 
-const Question = ({currentQuestion, dispatcher, answer, index, numQuestions, points, maxPossiblePoints}) => {
+const Question = () => {
   const {currentQuestion} = useQuiz();
 
   return (
@@ -11,7 +11,7 @@ const Question = ({currentQuestion, dispatcher, answer, index, numQuestions, poi
     <ProgressBar/>
     <div>
       <h4>{currentQuestion.question}</h4>
-      <Option currentQuestion={currentQuestion} dispatcher={dispatcher} answer={answer}/>
+      <Option/>
     </div>
     </>
   );
