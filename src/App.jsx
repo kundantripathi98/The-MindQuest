@@ -112,7 +112,7 @@ const App = () => {
         {status === "error" && <Error/>}
         {status === "ready" && <StartScreen/>}
         {status === "active" && <Question/>}
-        {status === "finished" && <Result points={points} maxPossiblePoints={maxPossiblePoints} dispatcher={dispatcher} highscore={highscore}/>}
+        {status === "finished" && <Result/>}
 
         {status === "active" && 
           <Footer>
